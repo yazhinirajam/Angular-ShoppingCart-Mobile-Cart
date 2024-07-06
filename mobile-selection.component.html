@@ -1,0 +1,16 @@
+<h2>Select a Mobile Brand</h2>
+<div class="brand-list">
+  <div *ngFor="let brand of brands" class="brand-box" (click)="selectBrand(brand)">
+    {{ brand.name }}
+  </div>
+</div>
+
+<div *ngIf="selectedBrand">
+  <h3>{{ selectedBrand.name }} Models</h3>
+  <div class="model-list">
+    <div *ngFor="let model of selectedBrand.models" class="model-box">
+      {{ model.name }} - ₹{{ model.price }}
+      <button (click)="addToCart(model)">Add to Cart</button>
+    </div>
+  </div>
+</div>

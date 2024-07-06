@@ -1,0 +1,41 @@
+.cart-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cart-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  flex: 1 0 100%; /* Adjust the width as needed */
+  text-align: center;
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+.cart-box input[type="number"] {
+  width: 50px;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.cart-box button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-box button:hover {
+  background-color: #c82333;
+}
+
+.total-price {
+  margin-top: 20px;
+  text-align: right;
+  font-size: 1.2em;
+}

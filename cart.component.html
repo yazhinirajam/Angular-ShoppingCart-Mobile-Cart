@@ -1,0 +1,11 @@
+<h2>Shopping Cart</h2>
+<div class="cart-list">
+  <div *ngFor="let mobile of cart" class="cart-box">
+    {{ mobile.name }} - ₹{{ mobile.price }} x 
+    <input type="number" [value]="mobile.quantity" (change)="updateQuantity(mobile.id, $event)">
+    <button (click)="removeFromCart(mobile.id)">Remove</button>
+  </div>
+</div>
+<div class="total-price">
+  <strong>Total: ₹{{ totalPrice }}</strong>
+</div>
